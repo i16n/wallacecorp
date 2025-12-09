@@ -1,0 +1,39 @@
+# Build artifacts
+build/
+DerivedData/
+*.xcarchive
+
+# Xcode workspace/user data
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+
+# Swift Package Manager
+.build/
+.swiftpm/
+.packages
+
+# Common dependency managers
+Pods/
+Carthage/Build/
+Accio/
+Dependencies/
+
+# Playgrounds
+timeline.xctimeline
+Playground.playgroundbook/Packages/
+Playground.playgroundbook/Documentation/
+
+# macOS junk
+.DS_Store
+
+# Fastlane and reports
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# Swift Package lock (optional – many projects keep this tracked)
+# Package.resolved
+
