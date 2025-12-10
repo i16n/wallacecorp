@@ -48,7 +48,7 @@ class ViewController: NSViewController {
     // Initializes the Voice SDK instance
     func initializeAgoraVoiceSDK() {
         // Create an instance of AgoraRtcEngineKit and set the delegate
-        agoraKit = AgoraRtcEngineKit.sharedEngine(withAppId: appId, delegate: self)
+        agoraKit = AgoraRtcEngineKit.sharedEngine(withAppId: appId!, delegate: self)
     }
     
     // Join the channel with specified options
