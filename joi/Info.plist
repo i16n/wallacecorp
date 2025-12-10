@@ -2,7 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>This app requires microphone access to enable conversation with a helpful AI persona</string>
+	<key>AGORA_APP_ID</key>
+	<string>$(AGORA_APP_ID)</string>
+	<key>AGORA_BASE_URL</key>
+	<string>$(AGORA_BASE_URL)</string>
+	<key>AGORA_TOKEN</key>
+	<string>$(AGORA_TOKEN)</string>
+	<key>LLM_API_KEY</key>
+	<string>$(LLM_API_KEY)</string>
+	<key>LLM_BASE_URL</key>
+	<string>$(LLM_BASE_URL)</string>
+	<key>LLM_MODEL_ID</key>
+	<string>$(LLM_MODEL_ID)</string>
+	<key>TTS_API_KEY</key>
+	<string>$(TTS_API_KEY)</string>
+	<key>TTS_MODEL_ID</key>
+	<string>$(TTS_MODEL_ID)</string>
+	<key>TTS_VENDOR</key>
+	<string>$(TTS_VENDOR)</string>
+	<key>TTS_VOICE_ID</key>
+	<string>$(TTS_VOICE_ID)</string>
 </dict>
 </plist>

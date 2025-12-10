@@ -7,8 +7,6 @@
 
 import Foundation
 
-let env = ProcessInfo.processInfo.environment
-
 struct LLMConfig: Codable {
     let url: String
     let api_key: String
@@ -63,10 +61,21 @@ struct JoinResponse: Codable {
     let status: String
 }
 
+let agoraBaseUrl = Bundle.main.object(forInfoDictionaryKey: "AGORA_BASE_URL") as? String
+let llmBaseUrl = Bundle.main.object(forInfoDictionaryKey: "LLM_BASE_URL") as? String
+let llmApiKey = Bundle.main.object(forInfoDictionaryKey: "LLM_API_KEY") as? String
+let ttsVendor = Bundle.main.object(forInfoDictionaryKey: "TTS_VENDOR") as? String
+let ttsApiKey = Bundle.main.object(forInfoDictionaryKey: "TTS_API_KEY") as? String
+let ttsModelId = Bundle.main.object(forInfoDictionaryKey: "TTS_MODEL_ID") as? String
+let ttsVoiceId = Bundle.main.object(forInfoDictionaryKey: "TTS_VOICE_ID") as? String
+let llmModelId = Bundle.main.object(forInfoDictionaryKey: "LLM_MODEL_ID") as? String
+
+
 final class AgoraAPIClient {
+
     private let appId: String
     private let authHeader: String
-    private let baseURL = "https://api.agora.io/api/conversational-ai-agent/v2"
+    private let baseURL = agoraBaseUrl!
 
     init(appId: String, base64Credentials: String) {
         self.appId = appId
@@ -100,8 +109,8 @@ final class AgoraAPIClient {
                 enable_string_uid: false,
                 idle_timeout: 120,
                 llm: LLMConfig(
-                    url: env["LLM_BASE_URL"]!,
-                    api_key: env["LLM_API_KEY"]!,
+                    url: llmBaseUrl!,
+                    api_key: llmApiKey!,
                     system_messages: [
                         SystemMessage(role: "system", content: "You are a helpful chatbot.")
                     ],
@@ -109,16 +118,16 @@ final class AgoraAPIClient {
                     failure_message: "Sorry, I don't know how to answer this question.",
                     max_history: 10,
                     params: [
-                        "model": env["LLM_MODEL_ID"]!
+                        "model": llmModelId!
                     ]
                 ),
                 asr: ASRConfig(language: "en-US"),
                 tts: TTSConfig(
-                  vendor: env["TTS_VENDOR"]!,
+                  vendor: ttsVendor!,
                   params: TTSParams(
-                    key: env["TTS_API_KEY"]!,
-                    model_id: env["TTS_MODEL_ID"]!,
-                    voice_id: env["TTS_VOICE_ID"]!,
+                    key: ttsApiKey!,
+                    model_id: ttsModelId!,
+                    voice_id: ttsVoiceId!,
                     sample_rate: 24000
                   )
                 )

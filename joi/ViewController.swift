@@ -7,12 +7,15 @@
 import Cocoa
 import AgoraRtcKit
 
+let agoraAppId = Bundle.main.object(forInfoDictionaryKey: "AGORA_APP_ID") as? String
+let agoraToken = Bundle.main.object(forInfoDictionaryKey: "AGORA_TOKEN") as? String
+
 class ViewController: NSViewController {
     private var statusLabel: NSTextField!
     
-    let appId = env["AGORA_APP_ID"]
+    let appId = agoraAppId
     let channelName = "demo" // unknown rn?
-    let token = env["AGORA_TOKEN"]
+    let token = agoraToken
 
     var agoraKit: AgoraRtcEngineKit!
 
