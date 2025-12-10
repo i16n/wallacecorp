@@ -8,6 +8,8 @@
 import Foundation
 import AVFAudio
 
+// I wrote this thinking we would need to pipe an audio stream into agora
+// but we may not need this, instead, can just "join a channel". Not sure yet (12/10/25)
 final class AudioProcessor {
     private let engine = AVAudioEngine()
 

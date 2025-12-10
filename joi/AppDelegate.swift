@@ -7,6 +7,9 @@
 
 import Cocoa
 
+// @main: this is called to launch the app
+// so what does it do?
+//" Use AppDelegate later for app‑wide concerns: global configuration (logging, analytics), handling app lifecycle events, registering for push notifications, responding to open‑file/open‑URL events, or managing multiple windows."
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
@@ -14,7 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        // For now, immediately initialize the Agora engine
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
