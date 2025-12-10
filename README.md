@@ -1,2 +1,2 @@
 # Wallace Corp
-Synergistic Ambient Presence
+Synergistic Ambient Presence STATUS: Under development

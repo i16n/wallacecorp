@@ -37,3 +37,5 @@ fastlane/test_output/
 # Swift Package lock (optional – many projects keep this tracked)
 # Package.resolved
 
+# config file
+joi/Config.local.xcconfig
