@@ -77,10 +77,17 @@ final class AgoraAPIClient {
     private let authHeader: String
     private let baseURL = agoraBaseUrl!
 
-    init(appId: String, base64Credentials: String) {
+    init(appId: String, customerKey: String, customerSecret: String) {
         self.appId = appId
+        
+        let plainCredentials = "\(customerKey):\(customerSecret)"
+
+        // Convert to Base64
+        let base64Credentials = Data(plainCredentials.utf8).base64EncodedString()
         self.authHeader = "Basic \(base64Credentials)"
     }
+    
+    
 
     func joinAgent(
         channel: String,

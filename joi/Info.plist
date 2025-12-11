@@ -6,6 +6,12 @@
 	<string>$(AGORA_APP_ID)</string>
 	<key>AGORA_BASE_URL</key>
 	<string>$(AGORA_BASE_URL)</string>
+	<key>AGORA_KEY</key>
+	<string>ef6b7fdba1224c539ef9a3d2de3d0389</string>
+	<key>AGORA_SECRET</key>
+	<string>9754ac4f14ea44d88c69ca796da61a7e</string>
+	<key>AGORA_TEMP_TOKEN</key>
+	<string>007eJxTYFjDpWd3OspBYoLodIuCE1vuZMxhvbnk7Q/X3vvrD9qqv5mgwJBknGhmkGxgYJxkbGCSaJpoaZyYmJKWYmCYZJpsapJkfsDQKrMhkJGBY+YnFkYGCATxWRgMTc0tGBgAYBIfLw==</string>
 	<key>AGORA_TOKEN</key>
 	<string>$(AGORA_TOKEN)</string>
 	<key>LLM_API_KEY</key>

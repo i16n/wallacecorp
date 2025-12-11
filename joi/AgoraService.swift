@@ -31,6 +31,16 @@ final class AgoraService: NSObject {
         agoraKit = AgoraRtcEngineKit.sharedEngine(withAppId: appId,
                                                   delegate: self)
         joinChannel()
+        
+        // then have the agent join the channel?
+        
+        
+    }
+    
+    func stop() {
+        agoraKit?.leaveChannel(nil)
+        AgoraRtcEngineKit.destroy()
+        agoraKit = nil
     }
 
     private func joinChannel() {
@@ -42,7 +52,7 @@ final class AgoraService: NSObject {
 
         agoraKit.joinChannel(byToken: token,
                              channelId: channelName,
-                             uid: 0,
+                             uid: 1578,
                              mediaOptions: options)
     }
 }
